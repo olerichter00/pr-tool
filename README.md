@@ -1,9 +1,9 @@
 <br />
 
 <h1 align="center">
-<img src="./logo.svg">
-
-<br />
+  <img src="./logo.svg">
+  <br />
+  <br />
   Create Pull Request
   <br />
 </h1>
