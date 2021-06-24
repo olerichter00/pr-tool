@@ -8,17 +8,17 @@
   <br />
 </h1>
 <h3 align="center">
-  A tool to create Pull Requests from current changes with one command.
+  A tool to create Pull Requests from current changes with one command
 </h3>
 <br />
 
 ### Features
 
-- Creates the branch `PREFIX/JIRA_TICKET_NUMBER/your-commit-message`
-- Commits all changes
-- Creates a Pull Request
-- Adds the jira ticket number and PR description to the PR body (using the repository's PR template if it exists)
-- Opens the PR in the browser
+- Creates the branch `PREFIX/JIRA_TICKET_NUMBER/your-commit-message`.
+- Commits all changes.
+- Creates a Pull Request.
+- Adds the Jira ticket number and a description to the PR body (using the repository's PR template if it exists).
+- Opens the PR in the browser.
 
 ### Setup
 
