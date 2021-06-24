@@ -1,46 +1,56 @@
-# PR Tool
+<h1 align="center">
+  Create Pull Request
+</h1>
 
-Creates a Pull Request from your current changes with just one command:
+<h3 align="center">
+  A tool to create Pull Requests from current changes.
+</h3>
 
-- Creates a new branch (PREFIX/TICKET_NUMBER/your-commit-message)
+### Features
+
+- Creates the branch `PREFIX/JIRA_TICKET_NUMBER/your-commit-message`
 - Commits all changes
 - Creates a Pull Request
-- Adds the ticket number and PR description to the PR body (using the repository's PR template if it exists)
+- Adds the jira ticket number and PR description to the PR body (using the repository's PR template if it exists)
 - Opens the PR in the browser
 
-## Setup
+### Setup
 
-- Make sure [Deno](https://deno.land/manual/getting_started/installation), [bit](https://github.com/teambit/bit) and [GitHub CLI](https://github.com/cli/cli) are installed.
+- Make sure [Deno](https://deno.land/manual/getting_started/installation) and [GitHub CLI](https://github.com/cli/cli) are installed.
 - Adjust [constants.ts](src/constants.ts)
 - Run `make compile` to create a self-contained executable.
-- Copy executable with `cp pr-tool /usr/local/bin/create-pr`
+- Copy executable with `cp cpr /usr/local/bin/cpr`
 
-## Usage
-
-You can either pass the PR title and the jira ticket as arguments
+### Usage
 
 ```
-create-pr feature: my new cool feature CX-1234
-create-pr https://artsyproduct.atlassian.net/browse/CX-1234 feature: my new cool feature 
+Usage:
+  $ cpr <PR TITLE> [options]
+
+Options:
+  -t, --ticket <ticket>            Provide a ticket number or url 
+  -d, --description <description>  Provide a PR description 
+  -h, --help                       Display this message 
 ```
 
-which will create the following PR
+### Examples
+
+```
+cpr feature: my new cool feature -t CX-1234 -d "My PR Descryption"
+cpr feature: my new cool feature -t https://artsyproduct.atlassian.net/browse/CX-1234
+```
+
+which will create the following Pull Request:
 
 ```
 PR Title: feature: my new cool feature
-PR Description: My Description
+PR Description: My PR Description
 Branch Name: ${YOUR_PREFIX}/CX-1234/my-new-cool-feature
 Included Files:
 my-file.txt
 ```
 
-or just enter
-
-```
-create-pr
-```
-
-## Development
+### Development
 
 - `make run`:      executes `index.ts`
 - `make test`:     runs tests

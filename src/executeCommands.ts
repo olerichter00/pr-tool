@@ -2,10 +2,10 @@ import { exec as execute } from "https://deno.land/x/execute@v1.1.0/mod.ts"
 import { exec } from "https://deno.land/x/exec/mod.ts"
 
 export const executeCommands = async (prTitle: string, branchName: string, prBody: string) => {
-  await exec(`bit switch ${branchName}`)
+  await exec(`bit checkout -b ${branchName}`)
 
   await exec(`git add .`)
-  await exec(`bit save "${prTitle}"`)
+  await exec(`git commit -m "${prTitle}"`)
 
   console.log(`Pushing ${branchName}...`)
   await exec(`git push --set-upstream origin ${branchName} --no-verify`)

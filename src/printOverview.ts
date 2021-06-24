@@ -3,11 +3,10 @@ import { promptString } from "./utils.ts"
 
 export const printOverview = async (prTitle: string, branchName: string, prDescription: string) => {
   if (!prTitle) {
-    console.error("Please provide a pr title.")
+    console.error("\x1b[31m%s\x1b[0m", "Please provide a PR title.")
     Deno.exit(1)
   }
 
-  console.log("\n")
   console.log("\x1b[36m%s\x1b[0m", "PR Title:", prTitle)
 
   console.log("\x1b[36m%s\x1b[0m", "PR Description:", prDescription)

@@ -1,4 +1,10 @@
-import { PR_TYPES } from "./constants.ts"
+export const prTypes: any = {
+  feature: "Feature",
+  feat: "Feature",
+  fix: "Bugfix",
+  enhancement: "Enhancement",
+  documentation: "Documentation",
+}
 
 export const createPRBody = async (
   prTitle: string,
@@ -18,7 +24,7 @@ export const createPRBody = async (
   const type = prTitle.split(":")[0]
 
   if (type && !type.includes(" ")) {
-    prBody = prBody.replace("**TYPE**", PR_TYPES[type] || type)
+    prBody = prBody.replace("**TYPE**", prTypes[type] || type)
   }
 
   if (prDescription) {
