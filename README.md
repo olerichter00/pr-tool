@@ -12,6 +12,8 @@
 </h3>
 <br />
 
+Lives [here](https://github.com/olerichter00/cpr) now!
+
 ### Features
 
 - Creates the branch `PREFIX/JIRA_TICKET_NUMBER/your-commit-message`.
