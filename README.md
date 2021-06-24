@@ -1,10 +1,13 @@
+<br />
+<br />
 <h1 align="center">
   Create Pull Request
+  <br />
 </h1>
-
 <h3 align="center">
   A tool to create Pull Requests from current changes.
 </h3>
+<br />
 
 ### Features
 
