@@ -22,6 +22,7 @@ Lives [here](https://github.com/olerichter00/cpr) now!
 - Adds the Jira ticket number and a description to the PR body (using the repository's PR template if it exists).
 - Opens the PR in the browser.
 
+
 ### Setup
 
 - Make sure [Deno](https://deno.land/manual/getting_started/installation) and [GitHub CLI](https://github.com/cli/cli) are installed.
